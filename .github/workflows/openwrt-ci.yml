@@ -10,7 +10,7 @@ name: OpenWrt-S
 on:
   push:
     branches: 
-      - master
+      - lede-17.01
   schedule:
      - cron:  0 23 ? * 6 
   release:
@@ -140,7 +140,6 @@ jobs:
           # CONFIG_PACKAGE_luci-app-samba4 is not set
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
           CONFIG_PACKAGE_luci-app-unblockmusic=y
-          CONFIG_PACKAGE_luci-app-ddns=y
           # CONFIG_PACKAGE_luci-app-wol is not set
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           # CONFIG_PACKAGE_luci-app-upnp is not set
@@ -151,8 +150,11 @@ jobs:
           CONFIG_PACKAGE_luci-ssl-openssl=y
           # CONFIG_PACKAGE_open-vm-tools is not set
           # CONFIG_PACKAGE_luci-app-openvpn-server is not set
-          CONFIG_PACKAGE_luci-app-aliddns=y
-          CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
+          CONFIG_PACKAGE_luci-app-ddns=y
+          CONFIG_PACKAGE_ddns-scripts=y
+          CONFIG_PACKAGE_ddns-scripts_aliyun=y
+          CONFIG_PACKAGE_luci-app-unblockmusic=y
+          CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=y
           EOF
           
           # LuCI主题:
