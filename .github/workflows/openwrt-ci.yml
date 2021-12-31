@@ -151,6 +151,7 @@ jobs:
           # CONFIG_PACKAGE_open-vm-tools is not set
           # CONFIG_PACKAGE_luci-app-openvpn-server is not set
           CONFIG_PACKAGE_luci-app-turboacc=y
+          CONFIG_PACKAGE_luci-app-sfe=y
           CONFIG_PACKAGE_luci-app-ddns=y
           CONFIG_PACKAGE_ddns-scripts=y
           CONFIG_PACKAGE_ddns-scripts_aliyun=y
